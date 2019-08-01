@@ -15,10 +15,10 @@ public class UniqueId {
    *   MYORG-12345678-1234-1234-1234-123456789abc
    * </pre>
    *
-   * @see <a href="https://docs.google.com/document/d/142px-GiCxT1kVMZFMdvDpB-eCFI_gCqyUAGYruZIZOw/edit?usp=sharing">Unique ID Purpose</a>
-   *
    * @param prefix Short string to identify data from an organization, usually 5 uppercase letters.
    * @return String representing the UniqueID
+   *
+   * @see <a href="https://docs.google.com/document/d/142px-GiCxT1kVMZFMdvDpB-eCFI_gCqyUAGYruZIZOw/edit?usp=sharing">Unique ID Purpose</a>
    */
   public static String generate(String prefix) {
     StringBuilder uid_build = new StringBuilder(prefix);
