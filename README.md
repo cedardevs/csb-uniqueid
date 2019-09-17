@@ -25,3 +25,25 @@ This will build the project if needed before running it.
 To list available gradle commands:
 
 `./gradlew tasks`
+
+## Alternative methods
+The following are one-line examples that you can try on the command line if the language shown is installed
+on your system. (Python, Ruby and Bash are common.)
+Replace "MYORG" with your organization prefix.
+
+### In Python
+`python  -c 'import uuid; print "MYORG-" + str(uuid.uuid1())'`
+
+### In Ruby
+`ruby -r securerandom -e 'puts "MYORG-"+SecureRandom.uuid'`
+
+### In Bash
+MacOS and most linux will have `uuidgen` installed
+
+`bash -c 'uuid=$(uuidgen); echo "MYORG-${uuid,,}"'`
+
+If there is a complaint "MYORG-${uuid,,}: bad substitution" then your version of Bash is before 4.0. Try instead
+
+`echo "MYORG-$(uuidgen)"`
+
+However, the result may be upper or lower case depending on your system.
